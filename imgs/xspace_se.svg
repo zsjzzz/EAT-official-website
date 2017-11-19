@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>xspace_se</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="优集客icon规范" transform="translate(-397.000000, -541.000000)" stroke="#D42A1D" stroke-width="3">
+            <path d="M439.247273,558.722626 C439.737273,560.419376 440,562.21044 440,564.061117 C440,574.871562 431.045455,583.635585 420,583.635585 C408.954545,583.635585 400,574.871562 400,564.061117 C400,553.250672 408.954545,544.486649 420,544.486649 C424.228182,544.486649 428.198182,545.799028 431.429091,547.990479" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
+            <ellipse id="Oval-3" fill="#FFD3CF" cx="420" cy="564.061117" rx="11" ry="10.7659574"></ellipse>
+        </g>
+    </g>
+</svg>

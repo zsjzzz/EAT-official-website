@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>购物车_nor</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="优集客icon规范" transform="translate(-553.000000, -403.000000)" stroke="#4B4B4B" stroke-width="3">
+            <g id="Group-25" transform="translate(556.000000, 407.000000)">
+                <polyline id="Path-210" stroke-linecap="round" stroke-linejoin="round" transform="translate(19.507649, 12.942662) scale(-1, 1) translate(-19.507649, -12.942662) " points="39 0.437554159 34.0152987 0.437554159 34.0152987 25.4477695 6.01529874 25.4477695 0.0152987367 5.43755416 27.9853281 5.43755416"></polyline>
+                <circle id="Oval-2" cx="9.5" cy="33.5" r="3"></circle>
+                <circle id="Oval-2-Copy-2" cx="25.5" cy="33.5" r="3"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

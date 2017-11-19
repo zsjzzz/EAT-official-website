@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>xspace_nor</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="优集客icon规范" transform="translate(-396.000000, -403.000000)" stroke="#4B4B4B" stroke-width="3">
+            <g id="Group-24" transform="translate(396.000000, 403.000000)">
+                <path d="M42.2472727,18.1079004 C42.7372727,19.8415367 43,21.6715367 43,23.5624458 C43,34.6079004 34.0454545,43.5624458 23,43.5624458 C11.9545455,43.5624458 3,34.6079004 3,23.5624458 C3,12.5169913 11.9545455,3.56244584 23,3.56244584 C27.2281818,3.56244584 31.1981818,4.90335493 34.4290909,7.14244584" id="Shape"></path>
+                <path d="M33.586,20.5624458 C33.8555,21.5159458 34,22.5224458 34,23.5624458 C34,29.6374458 29.075,34.5624458 23,34.5624458 C16.925,34.5624458 12,29.6374458 12,23.5624458 C12,17.4874458 16.925,12.5624458 23,12.5624458 C25.3255,12.5624458 27.509,13.2999458 29.286,14.5314458" id="Shape" transform="translate(23.000000, 23.562446) scale(-1, -1) translate(-23.000000, -23.562446) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

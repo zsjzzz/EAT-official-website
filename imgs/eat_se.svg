@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>eat_se</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="优集客icon规范" transform="translate(-122.000000, -541.000000)" stroke="#D42A1D" stroke-width="3">
+            <polyline id="Path-5" points="128 570.562446 128 582.562446 162 582.562446 162 570.562446"></polyline>
+            <path d="M131,546.562446 C126.996791,553.895779 124.995186,558.562446 124.995186,560.562446 C124.995186,563.562446 126,566.562446 131,566.562446 C136,566.562446 137,562.562446 138,562.562446 C139,562.562446 141,566.562446 145,566.562446 C149,566.562446 151,562.562446 152,562.562446 C153,562.562446 154,566.562446 159,566.562446 C164,566.562446 165,563.562446 165,560.562446 C165,558.562446 163,553.895779 159,546.562446 L131,546.562446 Z" id="Path-6" fill="#FFD2CF"></path>
+        </g>
+    </g>
+</svg>

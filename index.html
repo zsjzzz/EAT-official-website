@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Eat!</title>
+    <!--    阿里高清rem显示方案(必须放在开头)-->
+    <script>
+        ! function(e) {
+            function t(a) {
+                if (i[a]) return i[a].exports;
+                var n = i[a] = {
+                    exports: {},
+                    id: a,
+                    loaded: !1
+                };
+                return e[a].call(n.exports, n, n.exports, t), n.loaded = !0, n.exports
+            }
+            var i = {};
+            return t.m = e, t.c = i, t.p = "", t(0)
+        }([function(e, t) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            });
+            var i = window;
+            t["default"] = i.flex = function(e, t) {
+                var a = e || 100,
+                    n = t || 1,
+                    r = i.document,
+                    o = navigator.userAgent,
+                    d = o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i),
+                    l = o.match(/U3\/((\d+|\.){5,})/i),
+                    c = l && parseInt(l[1].split(".").join(""), 10) >= 80,
+                    p = navigator.appVersion.match(/(iphone|ipad|ipod)/gi),
+                    s = i.devicePixelRatio || 1;
+                p || d && d[1] > 534 || c || (s = 1);
+                var u = 1 / s,
+                    m = r.querySelector('meta[name="viewport"]');
+                m || (m = r.createElement("meta"), m.setAttribute("name", "viewport"), r.head.appendChild(m)), m.setAttribute("content", "width=device-width,user-scalable=no,initial-scale=" + u + ",maximum-scale=" + u + ",minimum-scale=" + u), r.documentElement.style.fontSize = a / 2 * s * n + "px"
+            }, e.exports = t["default"]
+        }]);
+        flex(100, 1);
+
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="HandheldFriendly" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no" />
+    <meta name="description" content="eat">
+    <meta name="keywords" content="eat">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <header class="top-header">
+        <section class="top-header-location">
+            <img src="imgs/location.svg" style="width: 0.35rem;height: 0.35rem">
+            <span>北四环东路</span>
+        </section>
+        <section class="top-header-logo">
+        </section>
+        <section class="top-header-more">
+            <img src="imgs/talk.svg" style="width: 0.32rem;height: 0.3rem;">
+        </section>
+    </header>
+    <!-- 导航栏 -->
+    <nav class="top-nav">
+        <ul class="top-nav-content clearfix">
+            <li><a href="#" class="top-nav-checked">推荐</a></li>
+            <li><a href="#">水果</a></li>
+            <li><a href="#">海洋生物</a></li>
+            <li><a href="#">蔬菜</a></li>
+            <li><a href="#">无肉不欢</a></li>
+            <li class="top-nav-more"></li>
+        </ul>
+        <!-- 导航栏下拉 -->
+        <nav class="nav-sub" style="display: none;">
+            <p>全部选项</p>
+            <section class="nav-sub-box">
+                <div style="color: rgb(212, 42, 29); border: 1px solid rgb(212, 42, 29);">推荐</div>
+                <div>海鲜吧</div>
+                <div>外卖食集</div>
+                <div>熟食集</div>
+                <div>水果</div>
+                <div>海洋动物</div>
+                <div>低卡</div>
+                <div>无肉不欢</div>
+                <div>家饭</div>
+                <div>轻食主意</div>
+                <div>美国大樱桃</div>
+                <div>零食</div>
+                <div>泰国椰青</div>
+                <div>饮品</div>
+                <div>减脂</div>
+            </section>
+        </nav>
+    </nav>
+    <!-- 导航栏遮罩 -->
+    <nav class="nav-shade" style="display: none;"></nav>
+    <!-- banner -->
+    <article class="banner swiper-container">
+        <section class="banner-bg swiper-wrapper">
+            <div class="swiper-slide"><img src="imgs/banner.png"></div>
+            <div class="swiper-slide"><img src="imgs/banner.png"></div>
+            <div class="swiper-slide"><img src="imgs/banner.png"></div>
+            <div class="swiper-slide"><img src="imgs/banner.png"></div>
+            <div class="swiper-slide"><img src="imgs/banner.png"></div>
+        </section>
+        <section class="banner-more">
+            <div class="banner-count">
+                <span class="swiper-pagination banner-count-span"></span>
+            </div>
+            <div class="banner-more-btn">
+                <span></span>
+            </div>
+        </section>
+    </article>
+    <!-- banner详情页 -->
+    <article class="banner-more-page" style="display: none;">
+
+        <div class="banner-more-page-close">
+            <div class="banner-more-page-close-btn"></div>
+        </div>
+
+        <section class="banner-page-box">
+            <div class="banner-page-content">
+                <img src="imgs/banner.png">
+            </div>
+            <div class="banner-page-content">
+                <img src="imgs/banner.png">
+            </div>
+            <div class="banner-page-content">
+                <img src="imgs/banner.png">
+            </div>
+            <div class="banner-page-content">
+                <img src="imgs/banner.png">
+            </div>
+        </section>
+    </article>
+    <!-- 新品发现&抢先 -->
+    <article class="new-product clearfix">
+        <section class="banner-intro">
+            <div>
+                <img src="imgs/freight.svg"><span>99元运费</span>
+            </div>
+            <div>
+                <img src="imgs/delivery.svg"><span>3公里1小时送达</span>
+            </div>
+            <div>
+                <img src="imgs/change-product.svg"><span>无理由退换货</span>
+            </div>
+        </section>
+        <!-- 新品 -->
+        <h3 class="new-product-title"><img src="imgs/findnew-titile.svg"></h3>
+        <!-- 新品发现滚动 -->
+        <section class="swiper-container find-container">
+            <section class="find-content swiper-wrapper">
+                <div class="product-box swiper-slide">
+                    <div>
+                        <img src="imgs/banner.png">
+                    </div>
+                    <h5>草莓芝士蛋糕</h5>
+                    <p>美国进口草莓芝士蛋糕</p>
+                    <span>￥26.9</span>
+                    <span class="shop-cart-btn1 j-shopCartBtn"></span>
+                    <div class="sold-out">已抢光</div>
+                </div>
+                <div class="product-box swiper-slide">
+                    <div> <img src="imgs/bitmap.png"></div>
+                    <h5>草莓芝士蛋糕</h5>
+                    <p>美国进口草莓芝士蛋糕</p>
+                    <span>￥26.9</span>
+                    <span class="shop-cart-btn1 j-shopCartBtn"></span>
+                </div>
+                <div class="product-box swiper-slide">
+                    <div> <img src="imgs/bitmap.png"></div>
+                    <h5>草莓芝士蛋糕</h5>
+                    <p>美国进口草莓芝士蛋糕</p>
+                    <span>￥26.9</span>
+                    <span class="shop-cart-btn1 j-shopCartBtn"></span>
+                </div>
+                <div class="product-box swiper-slide">
+                    <div> <img src="imgs/bitmap.png"></div>
+                    <h5>草莓芝士蛋糕</h5>
+                    <p>美国进口草莓芝士蛋糕</p>
+                    <span>￥26.9</span>
+                    <span class="shop-cart-btn1 j-shopCartBtn"></span>
+                </div>
+                <div class="product-box swiper-slide">
+                    <div> <img src="imgs/bitmap.png"></div>
+                    <h5>草莓芝士蛋糕</h5>
+                    <p>美国进口草莓芝士蛋糕</p>
+                    <span>￥26.9</span>
+                    <span class="shop-cart-btn1 j-shopCartBtn"></span>
+                </div>
+                <div class="product-box swiper-slide">
+                    <div> <img src="imgs/bitmap.png"></div>
+                    <h5>草莓芝士蛋糕</h5>
+                    <p>美国进口草莓芝士蛋糕</p>
+                    <span>￥26.9</span>
+                    <span class="shop-cart-btn1 j-shopCartBtn"></span>
+                </div>
+            </section>
+        </section>
+        <!-- 抢先 -->
+        <h3 class="anticipate-title"><img src="imgs/fresh-title.svg">
+            <!-- 倒计时 -->
+            <div class="count-down">
+                <span class="count-down-h">1</span>
+                <b>:</b>
+                <span class="count-down-m">2</span>
+                <b>:</b>
+                <span class="count-down-s">2</span>
+            </div>
+        </h3>
+        <!-- 抢先滚动 -->
+        <section class="swiper-container find-container">
+            <section class="find-content swiper-wrapper">
+                <div class="product-box swiper-slide product-box2">
+                    <div> <img src="imgs/bitmap.png"></div>
+                    <h5>草莓芝士蛋糕</h5>
+                    <p>美国进口草莓芝士蛋糕</p>
+                    <span>￥26.9</span>
+                    <span class="shop-cart-btn1 j-shopCartBtn"></span>
+                </div>
+                <div class="product-box swiper-slide product-box2">
+                    <div> <img src="imgs/bitmap.png"></div>
+                    <h5>草莓芝士蛋糕</h5>
+                    <p>美国进口草莓芝士蛋糕</p>
+                    <span>￥26.9</span>
+                    <span class="shop-cart-btn1 j-shopCartBtn"></span>
+                </div>
+                <div class="product-box swiper-slide product-box2">
+                    <div> <img src="imgs/bitmap.png"></div>
+                    <h5>草莓芝士蛋糕</h5>
+                    <p>美国进口草莓芝士蛋糕</p>
+                    <span>￥26.9</span>
+                    <span class="shop-cart-btn1 j-shopCartBtn"></span>
+                </div>
+                <div class="product-box swiper-slide product-box2">
+                    <div> <img src="imgs/bitmap.png"></div>
+                    <h5>草莓芝士蛋糕</h5>
+                    <p>美国进口草莓芝士蛋糕</p>
+                    <span>￥26.9</span>
+                    <span class="shop-cart-btn1 j-shopCartBtn"></span>
+                </div>
+                <div class="product-box swiper-slide product-box2">
+                    <div> <img src="imgs/bitmap.png"></div>
+                    <h5>草莓芝士蛋糕</h5>
+                    <p>美国进口草莓芝士蛋糕</p>
+                    <span>￥26.9</span>
+                    <span class="shop-cart-btn1 j-shopCartBtn"></span>
+                </div>
+                <div class="product-box swiper-slide product-box2">
+                    <div> <img src="imgs/bitmap.png"></div>
+                    <h5>草莓芝士蛋糕</h5>
+                    <p>美国进口草莓芝士蛋糕</p>
+                    <span>￥26.9</span>
+                    <span class="shop-cart-btn1 j-shopCartBtn"></span>
+                </div>
+            </section>
+        </section>
+    </article>
+    <!-- 领券中心 -->
+    <article class="coupon">
+        <img src="imgs/coupon1.png">
+        <img src="imgs/coupon2.png">
+    </article>
+    <!-- 纯粹味道 -->
+    <article class="taste">
+        <h3><img src="imgs/taste-title.svg"></h3>
+        <section class="taste-nav clearfix">
+            <div class="taste-hot" style="color: #d42a1d">
+                <img src="imgs/t-nav-red1.svg">
+                <p>爆款</p>
+            </div>
+            <div class="taste-seafood">
+                <img src="imgs/t-nav-white2.svg">
+                <p>海鲜吧</p>
+            </div>
+            <div class="taste-juice">
+                <img src="imgs/t-nav-white3.svg">
+                <p>果汁吧</p>
+            </div>
+            <div class="taste-takeout">
+                <img src="imgs/t-nav-white4.svg">
+                <p>外卖吧</p>
+            </div>
+            <div class="taste-bake">
+                <img src="imgs/t-nav-white5.svg">
+                <p>烘焙吧</p>
+            </div>
+            <div class="taste-beer">
+                <img src="imgs/t-nav-white6.svg">
+                <p>啤酒吧</p>
+            </div>
+        </section>
+        <!-- 纯粹味道各分组 -->
+        <!--爆款-->
+        <article class="taste-content clearfix">
+            <section class="taste-1">
+                <p>¥56.9&nbsp;&nbsp;意式抹茶树莓甜汤</p>
+                <img src="imgs/pure1.png">
+                <span style="right: 0.7rem;bottom: -0.44rem" class="shop-cart-btn2 j-shopCartBtn"></span>
+            </section>
+            <section class="taste-box1">
+                <section class="taste-2" style="top: 0">
+                    <p>¥66.9&nbsp;&nbsp;炭烤北极虾</p>
+                    <img src="imgs/pure2.png">
+                    <span style="left: 0.6rem;bottom: -0.44rem" class="shop-cart-btn2 j-shopCartBtn"></span>
+                </section>
+                <section class="taste-3" style="bottom: 0;right: 0">
+                    <p>¥56.9&nbsp;&nbsp;蒜香青口贝</p>
+                    <img src="imgs/pure3.png">
+                    <span style="right: 0.6rem;bottom: -0.44rem" class="shop-cart-btn2 j-shopCartBtn"></span>
+                </section>
+                <img src="imgs/pure-taste1.svg" class="taste-img1">
+                <img src="imgs/pure-taste2.svg" class="taste-img2">
+            </section>
+            <section style="margin-top: 0.85rem;" class="taste-1">
+                <p>¥56.9&nbsp;&nbsp;冰鲜扇贝</p>
+                <img src="imgs/pure4.png">
+                <span style="left: 0.7rem;bottom: -0.44rem" class="shop-cart-btn2 j-shopCartBtn"></span>
+            </section>
+            <section class="taste-box1">
+                <section class="taste-2" style="top: 0;right: 0">
+                    <p style="bottom: 10%">¥56.9&nbsp;马里苏拉奶酪薄饼</p>
+                    <img src="imgs/pure5.png">
+                    <span style="right: 0.6rem;bottom: -0.44rem" class="shop-cart-btn2 j-shopCartBtn"></span>
+                </section>
+                <section class="taste-3" style="bottom: 0;left: 0">
+                    <p>¥56.9&nbsp;&nbsp;特制草莓奶昔</p>
+                    <img src="imgs/pure6.png">
+                    <span style="left: 0.7rem;bottom: -0.44rem" class="shop-cart-btn2 j-shopCartBtn"></span>
+                </section>
+                <img src="imgs/pure-taste3.svg" class="taste-img3">
+                <img src="imgs/pure-taste4.svg" class="taste-img4">
+            </section>
+        </article>
+        <!--海鲜吧-->
+        <article class="taste-content clearfix" style="display: none;">
+            <div class="taste-box">
+                <div> <img src="imgs/test1.jpg"></div>
+                <h5>草莓芝士蛋糕</h5>
+                <p>美国进口草莓芝士蛋糕</p>
+                <span>￥26.9</span>
+                <span class="shop-cart-btn3 j-shopCartBtn">
+                    <span class="shop-cart-btn3-add">1</span>
+                </span>
+            </div>
+            <div class="taste-box">
+                <div> <img src="imgs/bitmap.png"></div>
+                <h5>草莓芝士蛋糕</h5>
+                <p>美国进口草莓芝士蛋糕</p>
+                <span>￥26.9</span>
+                <span class="shop-cart-btn3 j-shopCartBtn"></span>
+            </div>
+            <div class="taste-box">
+                <div> <img src="imgs/bitmap.png"></div>
+                <h5>草莓芝士蛋糕</h5>
+                <p>美国进口草莓芝士蛋糕</p>
+                <span>￥26.9</span>
+                <span class="shop-cart-btn3 j-shopCartBtn"></span>
+            </div>
+            <div class="taste-box">
+                <div> <img src="imgs/bitmap.png"></div>
+                <h5>草莓芝士蛋糕</h5>
+                <p>美国进口草莓芝士蛋糕</p>
+                <span>￥26.9</span>
+                <span class="shop-cart-btn3 j-shopCartBtn"></span>
+            </div>
+            <div class="taste-box">
+                <div> <img src="imgs/bitmap.png"></div>
+                <h5>草莓芝士蛋糕</h5>
+                <p>美国进口草莓芝士蛋糕</p>
+                <span>￥26.9</span>
+                <span class="shop-cart-btn3 j-shopCartBtn"></span>
+            </div>
+        </article>
+        <!--果汁吧-->
+        <article class="taste-content clearfix" style="display: none;">
+            <div class="taste-box">
+                <div> <img src="imgs/bitmap.png"></div>
+                <h5>草莓芝士蛋糕</h5>
+                <p>美国进口草莓芝士蛋糕</p>
+                <span>￥26.9</span>
+                <span class="shop-cart-btn3 j-shopCartBtn"></span>
+            </div>
+            <div class="taste-box">
+                <div> <img src="imgs/bitmap.png"></div>
+                <h5>草莓芝士蛋糕</h5>
+                <p>美国进口草莓芝士蛋糕</p>
+                <span>￥26.9</span>
+                <span class="shop-cart-btn3 j-shopCartBtn"></span>
+            </div>
+            <div class="taste-box">
+                <div> <img src="imgs/bitmap.png"></div>
+                <h5>草莓芝士蛋糕</h5>
+                <p>美国进口草莓芝士蛋糕</p>
+                <span>￥26.9</span>
+                <span class="shop-cart-btn3 j-shopCartBtn"></span>
+            </div>
+            <div class="taste-box">
+                <div> <img src="imgs/bitmap.png"></div>
+                <h5>草莓芝士蛋糕</h5>
+                <p>美国进口草莓芝士蛋糕</p>
+                <span>￥26.9</span>
+                <span class="shop-cart-btn3 j-shopCartBtn"></span>
+            </div>
+        </article>
+        <!--外卖吧-->
+        <article class="taste-content clearfix" style="display: none;">
+            <div class="taste-box">
+                <div> <img src="imgs/bitmap.png"></div>
+                <h5>草莓芝士蛋糕</h5>
+                <p>美国进口草莓芝士蛋糕</p>
+                <span>￥26.9</span>
+                <span class="shop-cart-btn3 j-shopCartBtn"></span>
+            </div>
+            <div class="taste-box">
+                <div> <img src="imgs/bitmap.png"></div>
+                <h5>草莓芝士蛋糕</h5>
+                <p>美国进口草莓芝士蛋糕</p>
+                <span>￥26.9</span>
+                <span class="shop-cart-btn3 j-shopCartBtn"></span>
+            </div>
+            <div class="taste-box">
+                <div> <img src="imgs/bitmap.png"></div>
+                <h5>草莓芝士蛋糕</h5>
+                <p>美国进口草莓芝士蛋糕</p>
+                <span>￥26.9</span>
+                <span class="shop-cart-btn3 j-shopCartBtn"></span>
+            </div>
+            <div class="taste-box">
+                <div> <img src="imgs/bitmap.png"></div>
+                <h5>草莓芝士蛋糕</h5>
+                <p>美国进口草莓芝士蛋糕</p>
+                <span>￥26.9</span>
+                <span class="shop-cart-btn3 j-shopCartBtn"></span>
+            </div>
+        </article>
+        <!--烘焙吧-->
+        <article class="taste-content clearfix" style="display: none;">
+            <div class="taste-box">
+                <div> <img src="imgs/bitmap.png"></div>
+                <h5>草莓芝士蛋糕</h5>
+                <p>美国进口草莓芝士蛋糕</p>
+                <span>￥26.9</span>
+                <span class="shop-cart-btn3 j-shopCartBtn"></span>
+            </div>
+            <div class="taste-box">
+                <div> <img src="imgs/bitmap.png"></div>
+                <h5>草莓芝士蛋糕</h5>
+                <p>美国进口草莓芝士蛋糕</p>
+                <span>￥26.9</span>
+                <span class="shop-cart-btn3 j-shopCartBtn"></span>
+            </div>
+            <div class="taste-box">
+                <div> <img src="imgs/bitmap.png"></div>
+                <h5>草莓芝士蛋糕</h5>
+                <p>美国进口草莓芝士蛋糕</p>
+                <span>￥26.9</span>
+                <span class="shop-cart-btn3 j-shopCartBtn"></span>
+            </div>
+            <div class="taste-box">
+                <div> <img src="imgs/bitmap.png"></div>
+                <h5>草莓芝士蛋糕</h5>
+                <p>美国进口草莓芝士蛋糕</p>
+                <span>￥26.9</span>
+                <span class="shop-cart-btn3 j-shopCartBtn"></span>
+            </div>
+        </article>
+        <!--啤酒吧-->
+        <article class="taste-content clearfix" style="display: none;">
+            <div class="taste-box">
+                <div> <img src="imgs/bitmap.png"></div>
+                <h5>草莓芝士蛋糕</h5>
+                <p>美国进口草莓芝士蛋糕</p>
+                <span>￥26.9</span>
+                <span class="shop-cart-btn3 j-shopCartBtn"></span>
+            </div>
+            <div class="taste-box">
+                <div> <img src="imgs/bitmap.png"></div>
+                <h5>草莓芝士蛋糕</h5>
+                <p>美国进口草莓芝士蛋糕</p>
+                <span>￥26.9</span>
+                <span class="shop-cart-btn3 j-shopCartBtn"></span>
+            </div>
+            <div class="taste-box">
+                <div> <img src="imgs/bitmap.png"></div>
+                <h5>草莓芝士蛋糕</h5>
+                <p>美国进口草莓芝士蛋糕</p>
+                <span>￥26.9</span>
+                <span class="shop-cart-btn3 j-shopCartBtn"></span>
+            </div>
+            <div class="taste-box">
+                <div> <img src="imgs/bitmap.png"></div>
+                <h5>草莓芝士蛋糕</h5>
+                <p>美国进口草莓芝士蛋糕</p>
+                <span>￥26.9</span>
+                <span class="shop-cart-btn3 j-shopCartBtn"></span>
+            </div>
+        </article>
+        <h4><a href="javascript:;" class="more-recommend"><span>更多纯粹味道&nbsp;&nbsp;</span><img src="imgs/more.svg"></a></h4>
+    </article>
+    <!-- 买手推荐 -->
+    <article class="recommend">
+        <h3><img src="imgs/recommend-title.svg"></h3>
+        <!-- 买手推荐滚动 -->
+        <article class="recommend-container swiper-container">
+            <article class="recommend-content swiper-wrapper">
+                <section class="recommend-box swiper-slide">
+                    <div class="recommend-img">
+                        <img src="imgs/banner.png">
+                        <span class="shade"></span>
+                    </div>
+                    <div class="recommend-logo"></div>
+                    <h5>草莓芝士蛋糕</h5>
+                    <p>芝士蛋糕</p>
+                    <span><i style="font-size: 0.2rem">¥</i>&nbsp;211.9</span>
+                </section>
+                <section class="recommend-box swiper-slide">
+                    <div class="recommend-img">
+                        <img src="imgs/bitmap.png">
+                        <span class="shade"></span>
+                    </div>
+                    <div class="recommend-logo"></div>
+                    <h5>草莓芝士蛋糕</h5>
+                    <p>美国进口</p>
+                    <span><i style="font-size: 0.2rem">¥</i>&nbsp;221.9</span>
+                </section>
+                <section class="recommend-box swiper-slide">
+                    <div class="recommend-img">
+                        <img src="imgs/bitmap.png">
+                        <span class="shade"></span>
+                    </div>
+                    <div class="recommend-logo"></div>
+                    <h5>草莓芝士蛋糕</h5>
+                    <p>芝士蛋糕</p>
+                    <span><i style="font-size: 0.2rem">¥</i>&nbsp;231.9</span>
+                </section>
+                <section class="recommend-box swiper-slide">
+                    <div class="recommend-img">
+                        <img src="imgs/bitmap.png">
+                        <span class="shade"></span>
+                    </div>
+                    <div class="recommend-logo"></div>
+                    <h5>草莓芝士蛋糕</h5>
+                    <p>美国进口</p>
+                    <span><i style="font-size: 0.2rem">¥</i>&nbsp;241.9</span>
+                </section>
+                <section class="recommend-box swiper-slide">
+                    <div class="recommend-img">
+                        <img src="imgs/bitmap.png">
+                        <span class="shade"></span>
+                    </div>
+                    <div class="recommend-logo"></div>
+                    <h5>草莓芝士蛋糕</h5>
+                    <p>芝士蛋糕</p>
+                    <span><i style="font-size: 0.2rem">¥</i>&nbsp;251.9</span>
+                </section>
+                <section class="recommend-box swiper-slide">
+                    <div class="recommend-img">
+                        <img src="imgs/bitmap.png">
+                        <span class="shade"></span>
+                    </div>
+                    <div class="recommend-logo"></div>
+                    <h5>草莓芝士蛋糕</h5>
+                    <p>进口草莓</p>
+                    <span><i style="font-size: 0.2rem">¥</i>&nbsp;2611.9</span>
+                </section>
+            </article>
+            <article class="recommend-count"></article>
+        </article>
+        <!-- mr.bear -->
+        <section class="recommend-more clearfix">
+            <div>
+                <img src="imgs/mrbear.png" class="mrbear-logo">
+                <img src="imgs/mrbear-1.png" style="display: none;" class="mrbear-logo">
+                <img src="imgs/mrbear-2.png" style="display: none;" class="mrbear-logo">
+                <img src="imgs/mrbear.png" style="display: none;" class="mrbear-logo">
+                <img src="imgs/mrbear-1.png" style="display: none;" class="mrbear-logo">
+                <img src="imgs/mrbear-2.png" style="display: none;" class="mrbear-logo">
+                <span class="mrbear">Mr.BearA</span>
+                <span class="mrbear" style="display:none">Mr.BearB</span>
+                <span class="mrbear" style="display:none">Mr.BearC</span>
+                <span class="mrbear" style="display:none">Mr.BearD</span>
+                <span class="mrbear" style="display:none">Mr.BearE</span>
+                <span class="mrbear" style="display:none">Mr.BearF</span>
+            </div>
+            <div class="mrbearSay">“米其林餐厅大厨推荐爆款面包，口味和工艺一流，我们以最合理的价格提供给烘焙美食爱好者，欢迎大家品尝”</div>
+            <div class="mrbearSay" style="display: none">“米其林餐厅大厨推荐爆款面包米其林餐厅大厨推荐爆款面包米其林餐厅大厨推荐爆款面包”</div>
+            <div class="mrbearSay" style="display: none">“口味和工艺一流，我们以最合理的价格提供给烘焙美食爱好者，欢迎大家品尝米其林餐厅大厨推荐爆款面包”</div>
+            <div class="mrbearSay" style="display: none">“口味和工艺一流，我们以最合理的价格提供给烘焙美食米其林餐厅大厨推荐爆款面包”</div>
+            <div class="mrbearSay" style="display: none">“口味和工艺一流，我们以最合理的价米其林餐厅大厨推荐爆款面包米其林餐厅大厨推荐爆款面包”</div>
+            <div class="mrbearSay" style="display: none">“口味和工艺一流，以最合理的价米其林餐厅大厨推荐爆款面包米其林餐厅大厨推荐爆款面包”</div>
+        </section>
+        <h4><a href="javascript:;" class="more-recommend"><span>更多Mr.Bear推荐&nbsp;&nbsp;</span><img src="imgs/more.svg"></a></h4>
+    </article>
+    <!-- eat说 -->
+    <article class="eatsay">
+        <h3><img src="imgs/eatsay-titile.svg"></h3>
+        <section>
+            <img src="imgs/eatsay.svg" style="width: 100%" height="auto">
+            <a class="eatsay1" href="javascript:;">#&nbsp;&nbsp;这个夏季<br>不可缺少的十大食材</a>
+            <a class="eatsay2" href="javascript:;">#&nbsp;&nbsp;中餐里的这些面粉,<br>你都用对了吗</a>
+            <a class="eatsay3" href="javascript:;">#&nbsp;&nbsp;15种你闻所未闻的酸奶吃法</a>
+            <a class="eatsay4" href="javascript:;">#&nbsp;&nbsp;eat为您精选的10种健康轻食</a>
+            <a class="eatsay5" href="javascript:;">#&nbsp;&nbsp;什么是纯粹味道</a>
+            <a class="eatsay6" href="javascript:;">#&nbsp;&nbsp;解密eat的<br>&nbsp;&nbsp;&nbsp;&nbsp;神秘空间</a>
+        </section>
+    </article>
+    <!-- 底部菜单 -->
+    <article class="bottom-menu clearfix">
+        <section>
+            <img src="imgs/eat_se.svg">
+            <p class="menu-checked">Eat</p>
+        </section>
+        <section>
+            <img src="imgs/list.png">
+            <p>分类</p>
+        </section>
+        <section>
+            <img src="imgs/xspace_nor.svg">
+            <p>e术馆</p>
+        </section>
+        <section id="shopCart-box">
+            <img src="imgs/shopcart2_nor.svg">
+            <p>购物车</p>
+        </section>
+        <section>
+            <img src="imgs/mine_nor.svg">
+            <p>我的</p>
+        </section>
+    </article>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fly.min.js"></script>
+    <script type="text/javascript" src="js/swiper.jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>购物车_se</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="优集客icon规范" transform="translate(-553.000000, -541.000000)">
+            <g id="Group-25" transform="translate(555.812500, 546.234321)">
+                <path d="M5.1875,14.7656792 C19.2061893,14.7656792 29.6914492,14.7656792 36.6432796,14.7656792 C36.4768937,15.1595039 34.8416126,21.2516718 33.1875,25.7656792 C29.2911859,25.7656792 19.9578526,25.7656792 5.1875,25.7656792 L5.1875,14.7656792 Z" id="Path-2" fill="#FFD2CF"></path>
+                <g transform="translate(0.187500, 0.328125)" stroke="#D42A1D" stroke-width="3">
+                    <polyline id="Path-210" stroke-linecap="round" stroke-linejoin="round" transform="translate(19.507649, 12.942662) scale(-1, 1) translate(-19.507649, -12.942662) " points="39 0.437554159 34.0152987 0.437554159 34.0152987 25.4477695 6.01529874 25.4477695 0.0152987367 5.43755416 27.9853281 5.43755416"></polyline>
+                    <circle id="Oval-2" cx="9.5" cy="33.5" r="3"></circle>
+                    <circle id="Oval-2-Copy-2" cx="25.5" cy="33.5" r="3"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
